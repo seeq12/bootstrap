@@ -269,14 +269,26 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
     }
 
     if (appendTo && self.dropdownMenu) {
-      var pos = $position.positionElements($element, self.dropdownMenu, 'bottom-left', true),
+      var dropUp = $element.hasClass('dropup');
+      var rightalign = self.dropdownMenu.hasClass('dropdown-menu-right');
+      var placement = 'auto bottom-left';
+      if(dropUp && rightalign){
+        placement = 'auto top-right';
+      } else if (dropUp) {
+        placement = 'auto top-left';
+      } else if (rightalign) {
+        placement = 'auto bottom-right';
+      }
+
+      var pos = $position.positionElements($element, self.dropdownMenu, placement, true),
         css,
-        rightalign,
         scrollbarPadding,
         scrollbarWidth = 0;
 
       css = {
         top: pos.top + 'px',
+        left: pos.left + 'px',
+        right: 'auto',
         display: isOpen ? 'block' : 'none'
       };
 

@@ -1,3 +1,14 @@
+<a name="2.5.4"></a>
+## [2.5.4](https://github.com/angular-ui/bootstrap/compare/2.5.6...2.5.4) (2017-12-20)
+
+
+### Bug Fixes
+
+* **dropdown:** Dropup ([aa90147](https://github.com/angular-ui/bootstrap/commit/aa90147))
+* **dropdown:** enable dropup for dropdowns ([75c0acf](https://github.com/angular-ui/bootstrap/commit/75c0acf))
+
+
+
 <a name="2.5.0"></a>
 # [2.5.0](https://github.com/angular-ui/bootstrap/compare/2.4.0...v2.5.0) (2017-01-28)
 
